@@ -16,7 +16,7 @@
 	  }
 	
     function importFile(){
-      importData(
+      /*importData(
         document.getElementById('inputfile').files[0],
         function(){
           document.getElementById('menu-tekst').classList.remove("disabled");
@@ -25,7 +25,7 @@
           window.location.hash = "#tekst";
         }
       );
-      return;
+      return;*/
       
       var apicall = "https://www.googleapis.com/drive/v3/files/" + window.location.hash.substr(1) + "?alt=media&key=AIzaSyBBaWWAdHetuqJYNxM_ZypzBzg-jwXbK3I";
       fetch(apicall)
