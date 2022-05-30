@@ -1,0 +1,226 @@
+TIJD: T_KLEM
+============
+Het weer | 1984-08-05 | <<tot>>
+-------------------------------
+Zwakke wind uit het zuid-westen. De hardste windstoot had een snelheid van 9,3 m/s.
+De gemiddelde temperatuur was 16,4 °C en een gevoelstemperatuur van 16,4 °C. De minimum temperatuur was 13,5 °C en de maximum temperatuur 21,7 °C.
+De zon scheen 2,4 uur.
+Er viel 1,3 mm neerslag verspreid over 2,9 uur.
+Het was een zwaar bewolkte dag
+
+
+LOCATIE: FLAT_OMA
+=================
+Oma's appartement
+-----------------
+
+
+LOCATIE: KERK
+=============
+Kerk
+----
+
+L: SCHOOL
+=
+School
+-
+
+
+ELEMENT: 1KIND
+==============
+Het is raar dat #P geen broertjes of zusjes heeft.
+--------------------------------------------------
+Ze denkt zelf dat dat een straf is ofzo?
+
+
+CONCEPT: KEUZE
+==============
+Bekering of hoofd afhakken
+--------------------------
+Bekering of hoofd afhakken is eigenlijk dezelfde keuze als: bekering of hel
+Als het eerste geen vrije keus is, is het tweede dat dan wel
+
+Karel de Grote (747-814) liet iedereen vermoorden die weigerde gedoopt te worden.
+
+
+PERSONAGE: MA
+=============
+Moeder | <<geboortedatum>> | <<overlijdensdatum>>
+-------------------------------------------------
+
+
+PERSONAGE: NEEF
+===============
+Neefje | <<geboortedatum>> | <<overlijdensdatum>>
+-------------------------------------------------
+
+
+PERSONAGE: NICHT
+================
+Nichtje | <<geboortedatum>> | <<overlijdensdatum>>
+--------------------------------------------------
+
+
+PERSONAGE: OMA
+==============
+Oma | <<geboortedatum>> | <<overlijdensdatum>>
+----------------------------------------------
+
+
+PERSONAGE: P
+============
+Petra | 1977-09-07 | <<overlijdensdatum>>
+-----------------------------------------
+dor grijsbruin haar
+mager
+
+
+PERSONAGE: PA
+=============
+Vader | <<geboortedatum>> | <<overlijdensdatum>>
+------------------------------------------------
+
+
+CONCEPT: VERPL
+==============
+Verpleegster
+------------
+#P droomt er misschien van om verpleegster te worden.
+Eigenlijk dokter of bioloog, maar verpleegster lijkt haar het hoogst haalbare.
+Al wordt zelfs dat moeilijk omdat haar ouders (#PA, #MA) niet willen dat ze werkt.
+
+
+TRANSFORMATIE: TR_VAST
+======================
+Innerlijk zet zich vast | P
+---------------------------
+
+
+VOORVAL: KLEM
+=============
+Vast onder het bed | 1984-08-05 12:00-14:00 | FLAT_OMA | P,OMA,NEEF,NICHT,MA,1KIND | TR_VAST
+--------------------------------------------------------------------------------------
+Meisje op beozke bij oma, soep, vast onder bed
+
+
+VOORVAL: KLEM_ZONDAGOCHTEND
+===========================
+Naar de kerk | 1984-08-05 09:00-11:00 | KERK | P, MA, PA | <<TRANSFORMATIES>>
+-----------------------------------------------------------------------------
+Elke zondag na de ochtenddienst liepen mijn moeder en ik naar het huis van mijn oma. Mijn vader sloeg dan eerder af bij de Genestetstraat en wandelde naar huis om bij te komen van de werkweek. Het was alsof er een gewicht van zijn schouders viel als hij bij ons vandaan de Genestetstraat uitliep.
+!!Mischien hier een echte scene van maken om te beschrijven hoe de zondagochtend verliep.
+Deze scene kan een goede introductie van familie geven en alvast een haakje (tijdens de preek) waardoor #P het extra vervelend vind om vast te zitten onder het bed.
+
+
+VOORVAL: SCHOOLDAG
+==================
+Typische schooldag | <<TIJD>> | SCHOOL | KEUZE, P | <<TRANSFORMATIES>>
+-----------------------------------------------------------------------------------------------------
+Een typische schooldag voor #P waarin we laten zien hoe er op haar gereageert wordt.
+Wordt ze gepest?
+Misschien de laatste schooldag voor de zomervakantie waarin ze blind wordt.
+We kunnen laten zien, hoe zij denkt door haar een vraag te laten stellen over #KEUZE tijdens de les.
+
+
+SCENE: SCENE_KLEM
+=================
+op bezoek bij Oma | P | KLEM_ZONDAGOCHTEND, KLEM
+------------------------------------------------
+[SCHOOLDAG: zelfde dag]
+Tien jaar was ik, een benig meisje met dor grijsbruin haar dat ik met een ijzer kammetje strak bijeenbond in een lange staart. Elke zondag na de ochtenddienst liepen mijn moeder en ik naar het huis van mijn oma. Mijn vader sloeg dan eerder af bij de Genestetstraat en wandelde naar huis om bij te komen van de werkweek. Het was alsof er een gewicht van zijn schouders viel als hij bij ons vandaan de Genestetstraat uitliep.
+Het was mijn taak om mijn moeder te helpen bij het bereiden van de groentesoep. Oma hield niet van geluid dus sloop ik door de keuken, maakte de koelkast met de grootst mogelijke voorzichtigheid open
+
+
+DEEL: D1
+========
+1. Jeugd | SCENE_KLEM
+---------------------
+
+
+DEEL: D2
+========
+2. 17 | <<SUBDELEN/SCENES>>
+---------------------------
+
+
+DEEL: D3
+========
+3. blind/doof | <<SUBDELEN/SCENES>>
+-----------------------------------
+
+
+DEEL: D4
+========
+4. bevrijdt | <<SUBDELEN/SCENES>>
+---------------------------------
+
+
+DEEL: D5
+========
+5. tochniet | <<SUBDELEN/SCENES>>
+---------------------------------
+
+
+PLOT: PL1
+=========
+Jeugd | <<SUBPLOTS>>
+--------------------
+[KLEM: bevroren onder bed]
+Hier wat losse scenes uit haar jeugd, die verklaren.
+hoe meisje zo is geworden.
+en die wat informatie over familie/achtergrond geven.
+ze hebben een thuiskerk. Thuis is het zo streng dat school,
+ook al wordt ze daar gepest, een bevrijding is.
+
+
+PLOT: PL2
+=========
+17 | <<SUBPLOTS>>
+-----------------
+Het beslissende jaar. Meisje wordt 17, moet eindexamen voor het VWO doen
+Is angstig wat de toekomst haar brengen zal. Ziet erg op tegen thuis
+
+
+PLOT: PL3
+=========
+blind/doof | <<SUBPLOTS>>
+-------------------------
+duurt van net voor of net na eindexamen (begin mei) tot ergens september/oktober.
+Een prima tijd om buiten het zicht van school afwezig te zijn, niemand heeft datin de gaten.
+
+
+PLOT: PL4
+=========
+bevrijdt | <<SUBPLOTS>>
+-----------------------
+
+
+PLOT: PL5
+=========
+tochniet | <<SUBPLOTS>>
+-----------------------
+Mattheüs 18:9
+En indien uw oog u ergert, trekt het uit, en werpt het van u. Het is u beter, maar een oog hebbende, tot het leven in te gaan, dan twee ogen hebbende, in het helse vuur geworpen te worden.
+
+
+SYNOPSIS: TASTZIN
+=================
+Tastzin | PL1,PL2,PL3,PL4,PL5 | D1,D2,D3,D4,D5
+----------------------------------------------
+Streng christelijk opgevoedt bangig en tenger meisje leeft voornamelijk in haar hoofd.
+Rond haar 17e komt haar interne spanning tot een hoogtepunt. (Afstuderen/werk of trouwen?).
+In een climaxscene met haar vader (misschien betrapt hij haar tijdens masturbatie) hoort ze ineens niets meer.
+De volgende dag is ze haar zicht kwijt. (Wil haar ouders niet onder ogen komen?)
+Doof en blind ontrekt ze zich steeds meer aan haar ouders en schoolboeken en bijbel en vindt ze vrijheid.
+Ze vecht zich vrij en herwint haar gehoor en zicht.
+Dan komt ze erachter dat met het terugkomen van gehoor en zicht ook haar oude patronen weer terugkomen.
+Na veel proberen beseft ze dat ze hier geen vrije wil in heeft. En weet ze ook de oplossing:
+haar oren en ogen uitsteken.
+
+Wordt verteld door vrouw van 44 jaar oud die terugkijkt op haar leven.
+Verteller komt daarom ook commentaar geven bij de scenes om alles duidelijk te kunnen verklaren voor de lezer.
+
+Fragment:
+Je kunt niet aanraken zonder aangeraakt te worden. En andersom. Daarin onderscheidt de tast zich van alle andere zintuigen. Misschien is het daarom dat ik mij nooit meer eenzaam voel.
+Vijfentwintig jaar geleden, op mijn zeventiende verjaardag, werd ik doof wakker. De volgende dag kon ik niets meer zien. Doof en blind. Als kind zou ik dat een angstaanjagende gedachte hebben gevonden: afgesloten van de wereld, opgesloten in jezelf. In werkelijkheid was het mijn bevrijding.
+
