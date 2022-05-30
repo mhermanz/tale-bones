@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="mart">
+<head>
+  
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="parse.js"></script>
+  <script type="text/javascript" src="grid.js"></script>
+  <script type="text/javascript" src="text.js"></script>
+  <script type="text/javascript" src="part.js"></script>
+  <script type="text/javascript" src="router.js"></script>
+  <script type="text/javascript" src="overzicht.js"></script>
+	<script>
+	  function hashChanged(){
+	    route(window.location.hash);
+	  }
+	
+    function importFile(){
+      importData(
+        document.getElementById('inputfile').files[0],
+        function(){
+          document.getElementById('menu-tekst').classList.remove("disabled");
+          document.getElementById('menu-niveaus').classList.remove("disabled");
+          document.getElementById('menu-overzicht').classList.remove("disabled");
+          window.location.hash = "#tekst";
+        }
+      );
+      return;
+      
+      var apicall = "https://www.googleapis.com/drive/v3/files/" + window.location.hash.substr(1) + "?alt=media&key=AIzaSyBBaWWAdHetuqJYNxM_ZypzBzg-jwXbK3I";
+      fetch(apicall)
+        .then(response => response.text())
+        .then(data => {
+        	// Do something with your data
+        	parse(data);
+        	document.getElementById('menu-tekst').classList.remove("disabled");
+          document.getElementById('menu-niveaus').classList.remove("disabled");
+          window.location.hash = "#tekst";
+        });
+    }
+    function showGrid(dropdownItem){
+      fillGrid(dropdownItem.innerHTML.split(".")[0].trim(), dropdownItem.innerHTML);
+    }
+    function showText(){
+      fillTextarea(storyAsText());
+    }
+  </script>
+  <style>
+    body{
+        padding-top:70px;
+    }
+    li:hover {
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body onload="importFile();" onhashchange="hashChanged();">
+  
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Verhaal</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item disabled" id="menu-tekst"><a class="nav-link" href="#Tekst">Tekst</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle disabled" href="" id="menu-niveaus" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Niveau's
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="menu-niveaus">
+            <li><a class="dropdown-item" href="#tijdstippen">1. Tijdstippen</a></li>
+            <li><a class="dropdown-item" href="#locaties">2. Locaties</a></li>
+            <li><a class="dropdown-item" href="#elementen">3. Elementen</a></li>
+            <li><a class="dropdown-item" href="#personages">4. Personages</a></li>
+            <li><a class="dropdown-item" href="#concepten">5. Concepten</a></li>
+            <li><a class="dropdown-item" href="#transformaties">6. Transformaties</a></li>
+            <li><a class="dropdown-item" href="#voorvallen">7. Voorvallen</a></li>
+            <li><a class="dropdown-item" href="#gebeurtenissen">8. Gebeurtenissen</a></li>
+            <li><a class="dropdown-item" href="#scenes">9. Scene's</a></li>
+            <li><a class="dropdown-item" href="#delen">10. Delen</a></li>
+            <li><a class="dropdown-item" href="#plots">11. Plots</a></li>
+            <li><a class="dropdown-item" href="#synopsis">12. Synopsis</a></li>
+          </ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle disabled" href="" id="menu-overzicht" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Overzicht
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="menu-overzicht">
+            <li><a class="dropdown-item" href="#overzicht/tijd">Tijden</a></li>
+            <li><a class="dropdown-item" href="#overzicht/voorvallen">Voorvallen</a></li>
+            <li><a class="dropdown-item" href="#overzicht/transformaties">Transformaties</a></li>
+            <li><a class="dropdown-item" href="#overzicht/scenes">Scènes</a></li>
+            <li><a class="dropdown-item" href="#overzicht/plot">Plot</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input type="file" class="form-control-file form-control-sm" id="inputfile" onchange="importFile();">
+      </form>
+      </div>
+      
+    </div>
+  </nav>
+  
+  <div class="form-group" id="main">
+  </div>
+  
+</body>
+
+</html>
