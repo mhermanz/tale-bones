@@ -32,9 +32,10 @@
         .then(response => response.text())
         .then(data => {
         	// Do something with your data
-        	parse(data);
-        	document.getElementById('menu-tekst').classList.remove("disabled");
+          parse(data);
+          document.getElementById('menu-tekst').classList.remove("disabled");
           document.getElementById('menu-niveaus').classList.remove("disabled");
+          document.getElementById('menu-overzicht').classList.remove("disabled");
           window.location.hash = "#tekst";
         });
     }
