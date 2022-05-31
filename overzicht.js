@@ -8,7 +8,7 @@ function showOverzichtAfkortingen(title = "AFKORTINGEN", filter = null, parentNo
   }
   vv.sort((v1, v2) => srtName(v1, v2));
   vv.forEach(v => {
-    addOverzichtRow([v.name, v.description], b);
+    addOverzichtRow([partLink(v.name, true, true, "#" + v.name), v.description], b);
   });
 }
 
