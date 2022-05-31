@@ -30,7 +30,6 @@ function showOverzichtVoorvallen(title = "VOORVALLEN", filter = null, parentNode
     addOverzichtRow([tijd, locatie, partLink(v.name, true), personages, elementen, concepten, transformaties], b);
   });
 }
-showOverzichtCodeLijst
 
 function showOverzichtTransformaties(title = "TRANSFORMATIES", filter = null, parentNode = null){
   let [h, b] = createTable(title, parentNode);
