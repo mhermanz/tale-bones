@@ -28,7 +28,7 @@ function route(hash){
   else if (hash == "#overzicht/voorvallen")
     showOverzichtVoorvallen();
   else if (hash == "#overzicht/codelijst")
-    showOverzichtCodeLijst();
+    showOverzichtAfkortingen();
   else if (hash == "#overzicht/scenes")
     showOverzichtScenes();
   else if (hash == "#overzicht/transformaties")
