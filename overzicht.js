@@ -1,4 +1,17 @@
 
+function showOverzichtAfkortingen(title = "AFKORTINGEN", filter = null, parentNode = null){
+  let [h, b] = createTable(title, parentNode);
+  addOverzichtRow(["AFKORTING", "KORTE OMSCHRIJVING"], h, true);
+  let vv = story;
+  if (filter !== null){
+    vv = vv.filter(filter);
+  }
+  vv.sort((v1, v2) => srtName(v1, v2));
+  vv.forEach(v => {
+    addOverzichtRow([v.name, v.description], b);
+  });
+}
+
 function showOverzichtVoorvallen(title = "VOORVALLEN", filter = null, parentNode = null){
   let [h, b] = createTable(title, parentNode);
   addOverzichtRow(["TIJD", "LOCATIE", "VOORVAL", "PERSONAGES", "ELEMENTEN", "CONCEPTEN", "TRANSFORMATIES"], h, true);
@@ -17,6 +30,7 @@ function showOverzichtVoorvallen(title = "VOORVALLEN", filter = null, parentNode
     addOverzichtRow([tijd, locatie, partLink(v.name, true), personages, elementen, concepten, transformaties], b);
   });
 }
+showOverzichtCodeLijst
 
 function showOverzichtTransformaties(title = "TRANSFORMATIES", filter = null, parentNode = null){
   let [h, b] = createTable(title, parentNode);
@@ -199,6 +213,10 @@ function addOverzichtRow(cols, table, header = false){
     td.innerHTML = col;
     row.append(td);
   });
+}
+
+function srtName(v1, v2){
+  return (v1.name > v2.name) ? 1 : -1;
 }
 
 function srtTransformatie(t1, t2, sortedVoorvallen){
