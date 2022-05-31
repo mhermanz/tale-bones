@@ -34,7 +34,7 @@
 	    Authorization: "Bearer AIzaSyBBaWWAdHetuqJYNxM_ZypzBzg-jwXbK3I"
 	  }
 	};
-      fetch(apicall)
+      fetch(apicall, apiHeader)
         .then(response => response.text())
         .then(data => {
         	// Do something with your data
