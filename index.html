@@ -27,7 +27,13 @@
       );
       return;*/
       
-      var apicall = "https://www.googleapis.com/drive/v3/files/" + window.location.hash.substr(1) + "?alt=media&key=AIzaSyBBaWWAdHetuqJYNxM_ZypzBzg-jwXbK3I";
+      /*var apicall = "https://www.googleapis.com/drive/v3/files/" + window.location.hash.substr(1) + "?alt=media&key=AIzaSyBBaWWAdHetuqJYNxM_ZypzBzg-jwXbK3I";*/
+      var apicall = "https://www.googleapis.com/drive/v3/files/" + window.location.hash.substr(1) + "?alt=media";
+      var apiHeader = {
+	  headers: {
+	    Authorization: "Bearer AIzaSyBBaWWAdHetuqJYNxM_ZypzBzg-jwXbK3I"
+	  }
+	};
       fetch(apicall)
         .then(response => response.text())
         .then(data => {
