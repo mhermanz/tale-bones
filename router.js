@@ -27,6 +27,8 @@ function route(hash){
     fillGrid(12, "12. Synopsis");
   else if (hash == "#overzicht/voorvallen")
     showOverzichtVoorvallen();
+  else if (hash == "#overzicht/codelijst")
+    showOverzichtCodeLijst();
   else if (hash == "#overzicht/scenes")
     showOverzichtScenes();
   else if (hash == "#overzicht/transformaties")
