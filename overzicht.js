@@ -1,14 +1,14 @@
 
 function showOverzichtAfkortingen(title = "AFKORTINGEN", filter = null, parentNode = null){
   let [h, b] = createTable(title, parentNode);
-  addOverzichtRow(["AFKORTING", "KORTE OMSCHRIJVING"], h, true);
+  addOverzichtRow(["TYPE", "AFKORTING", "KORTE OMSCHRIJVING"], h, true);
   let vv = story;
   if (filter !== null){
     vv = vv.filter(filter);
   }
   vv.sort((v1, v2) => srtName(v1, v2));
   vv.forEach(v => {
-    addOverzichtRow([partLink(v.name, true, true, "#" + v.name), v.description], b);
+    addOverzichtRow([v.type, partLink(v.name, true, true, "#" + v.headers[0]), v.description], b);
   });
 }
 
