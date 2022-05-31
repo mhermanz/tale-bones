@@ -58,6 +58,7 @@ function showOverzichtTransformaties(title = "TRANSFORMATIES", filter = null, pa
   });
 }
 
+
 function showOverzichtPlot(title = "PLOT", parentNode = null){
   let vv = story.filter(p => p.type == "SYNOPSIS");
   if (vv.length !== 1){
